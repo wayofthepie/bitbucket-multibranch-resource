@@ -16,4 +16,5 @@ jobs:
 - name: super mega pipeline!
   plan:
     - get: multibranch
+    - put: multibranch
 
