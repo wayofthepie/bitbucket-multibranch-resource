@@ -1,0 +1,19 @@
+---
+resource_types:
+- name: concourse-bitbucket-pipelines-discovery
+  type: docker-image
+  source:
+    repository: wayofthepie/bitbucket-multibranch-resource
+
+resources:
+- name: multibranch
+  type: concourse-bitbucket-pipelines-discovery
+  check_every: 10s
+  source:
+    test: test
+
+jobs:
+- name: super mega pipeline!
+  plan:
+    - get: multibranch
+
