@@ -1,7 +1,7 @@
 FROM alpine
 
 RUN mkdir -p /opt/resources && \
-  apk add --no-cache python3 curl && \
+  apk add --no-cache python3 curl jq && \
   pip3 install stashy
 
 ADD check.py /opt/resource/check
